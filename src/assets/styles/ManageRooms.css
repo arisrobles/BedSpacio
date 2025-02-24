@@ -1,0 +1,264 @@
+/* Manage Rooms Section */
+
+.manage-rooms {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 16px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    position: relative;
+    margin-left: 120px;
+  }
+  
+  .manage-rooms h1 {
+    font-size: 18px; /* Reduced font size */
+    font-weight: 600; /* Slightly lighter weight */
+    color: #333;
+    margin-bottom: 10px; /* Reduced margin */
+    text-align: left;
+  }
+  
+  .manage-rooms p {
+    font-size: 12px; /* Smaller font size */
+    color: #666;
+    margin-bottom: 14px; /* Reduced margin */
+    line-height: 1.5;
+  }
+  
+  .manage-rooms .buttons-wrapper {
+    display: flex;
+    gap: 10px; /* Reduced gap */
+    margin-bottom: 18px; /* Reduced margin */
+    justify-content: flex-end;
+  }
+  
+  .manage-rooms .buttons-wrapper button {
+    padding: 6px 12px; /* Smaller padding */
+    font-size: 11px; /* Smaller font size */
+    font-weight: 600; /* Slightly lighter weight */
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .manage-rooms .buttons-wrapper button:active {
+    background-color: #004085;
+    transform: translateY(0);
+  }
+  
+  .manage-rooms table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 18px; /* Reduced margin */
+  }
+  
+  .manage-rooms table th,
+  .manage-rooms table td {
+    padding: 10px 12px; /* Reduced padding */
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .manage-rooms table th {
+    background-color: #f4f4f4;
+    font-weight: 600; /* Slightly lighter weight */
+    color: #333;
+    font-size: 12px; /* Smaller font size for headers */
+  }
+  
+  .manage-rooms table td {
+    color: #666;
+    font-size: 11px; /* Smaller font size for table data */
+  }
+  
+  .manage-rooms table tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  /* Renter Actions Styles */
+  .manage-rooms .renter-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .manage-rooms .renter-actions button {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .manage-rooms .renter-actions .minus-btn {
+    background-color: #dc3545;
+  }
+  
+  .manage-rooms .renter-actions .minus-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+  
+  .manage-rooms .renter-actions .plus-btn {
+    background-color: #28a745;
+  }
+  
+  .manage-rooms .renter-actions .plus-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+  
+  /* Room Actions Styles */
+  .manage-rooms .room-actions {
+    display: flex;
+    gap: 6px; /* Reduced gap */
+  }
+  
+/* General button styling for room actions */
+button {
+  padding: 5px 10px; /* Smaller padding */
+  font-size: 11px; /* Smaller font size */
+  font-weight: 500; /* Lighter weight */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Edit button specific styling */
+.edit-btn {
+  background-color: #ffc107; /* Yellow background for Edit */
+}
+
+/* Hover effect for edit button */
+.edit-btn:hover {
+  background-color: #e0a800; /* Darker yellow when hovered */
+}
+  
+  /* Modal Styles */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 18px;
+    border-radius: 8px;
+    width: 380px; /* Slightly reduced width */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal h2 {
+    margin-bottom: 14px; /* Reduced margin */
+    font-size: 16px; /* Smaller font size for modal header */
+    font-weight: 600; /* Slightly lighter weight */
+  }
+  
+  .modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Reduced gap */
+  }
+  
+  .modal form input {
+    padding: 6px;
+    margin-top: 4px;
+    font-size: 12px; /* Smaller font size for inputs */
+  }
+  
+  .modal-buttons {
+    display: flex;
+    gap: 10px; /* Reduced gap */
+    justify-content: flex-end;
+    margin-top: 14px; /* Reduced margin */
+  }
+  
+  .modal-buttons button {
+    padding: 6px 12px; /* Smaller padding */
+    font-size: 12px; /* Smaller font size */
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .modal-buttons button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Search Bar */
+.search-bar {
+    margin: 20px 0;
+    text-align: right;
+  }
+  
+  .search-bar input {
+    padding: 5px 8px; /* Slightly smaller padding */
+    width: 240px; /* Reduced width */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 11px; /* Smaller font size */
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .search-bar input::placeholder {
+    color: #aaa;
+  }
+  
+.message-banner {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px 25px;
+  border-radius: 5px;
+  z-index: 2001; /* Higher than modal z-index */
+  animation: slideIn 0.3s ease-out;
+}
+
+.success {
+  background-color: #28a745;
+  color: white;
+  border: 1px solid #1e7e34;
+}
+
+.error {
+  background-color: #dc3545;
+  color: white;
+  border: 1px solid #bd2130;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+  

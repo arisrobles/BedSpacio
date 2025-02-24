@@ -1,0 +1,476 @@
+/* Manage Tenants Section */
+
+.manage-tenants {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 16px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  position: relative;
+  margin-left: 120px;
+}
+
+.manage-tenants h1 {
+  font-size: 18px; /* Reduced font size */
+  font-weight: 600; /* Slightly lighter weight */
+  color: #333;
+  margin-bottom: 10px; /* Reduced margin */
+  text-align: left;
+}
+
+.manage-tenants .description {
+  font-size: 12px; /* Smaller font size */
+  color: #666;
+  margin-bottom: 14px; /* Reduced margin */
+  line-height: 1.5;
+}
+
+.manage-tenants .buttons-wrapper {
+  display: flex;
+  gap: 10px; /* Reduced gap */
+  margin-bottom: 18px; /* Reduced margin */
+  justify-content: flex-end;
+}
+
+.manage-tenants .add-tenant-btn {
+  padding: 6px 12px; /* Smaller padding */
+  font-size: 12px; /* Reduced font size */
+  font-weight: 600; /* Slightly lighter weight */
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.manage-tenants .add-tenant-btn:hover {
+  background-color: #0056b3;
+}
+
+.manage-tenants .add-tenant-btn:active {
+  background-color: #004085;
+  transform: translateY(0);
+}
+
+.manage-tenants .add-tenant-btn .icon {
+  font-size: 14px; /* Reduced icon size */
+}
+
+.manage-tenants .tenants-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 18px; /* Reduced margin */
+}
+
+.manage-tenants .tenants-list th,
+.manage-tenants .tenants-list td {
+  padding: 10px 12px; /* Reduced padding */
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.manage-tenants .tenants-list th {
+  background-color: #f4f4f4;
+  font-weight: 600; /* Slightly lighter weight */
+  color: #333;
+  font-size: 12px; /* Smaller font size for headers */
+}
+
+.manage-tenants .tenants-list td {
+  color: #666;
+  font-size: 11px; /* Smaller font size for table data */
+}
+
+.manage-tenants .tenants-list tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Action Buttons Styles */
+.manage-tenants .tenant-actions {
+  display: flex;
+  gap: 6px; /* Reduced gap */
+}
+
+.manage-tenants .tenant-actions button {
+  padding: 5px 10px; /* Smaller padding */
+  font-size: 11px; /* Smaller font size */
+  font-weight: 500; /* Lighter weight */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.manage-tenants .tenant-actions .edit-btn {
+  background-color: #ffc107; /* Yellow for Edit */
+}
+
+.manage-tenants .tenant-actions .edit-btn:hover {
+  background-color: #e0a800; /* Darker yellow on hover */
+}
+
+.manage-tenants .tenant-actions .delete-btn {
+  background-color: #dc3545; /* Red for Delete */
+}
+
+.manage-tenants .tenant-actions .delete-btn:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+/* Modal Styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  width: 500px;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.modal-content h2 {
+  margin: 0 0 24px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 12px;
+}
+
+.modal-content form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.modal-content label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 500;
+  color: #4a4a4a;
+  font-size: 14px;
+}
+
+.modal-content input,
+.modal-content select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+  background-color: #fafafa;
+}
+
+.modal-content input:focus,
+.modal-content select:focus {
+  border-color: #2563eb;
+  outline: none;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.modal-buttons {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.modal-buttons button {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modal-buttons button:first-child {
+  background-color: #ffffff;
+  color: #4b5563;
+  border: 1px solid #e5e7eb;
+}
+
+.modal-buttons button:first-child:hover {
+  background-color: #f9fafb;
+  border-color: #d1d5db;
+}
+
+.modal-buttons button:last-child {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+}
+
+.modal-buttons button:last-child:hover {
+  background-color: #1d4ed8;
+}
+
+/* Delete Confirmation Modal */
+.delete-confirmation-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.delete-modal-content {
+  background-color: #ffffff;
+  width: 400px;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.delete-modal-content h2 {
+  margin: 0 0 16px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.delete-modal-content p {
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.delete-modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.delete-modal-actions button {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.delete-modal-actions button:first-child {
+  background-color: #dc2626;
+  color: white;
+  border: none;
+}
+
+.delete-modal-actions button:first-child:hover {
+  background-color: #b91c1c;
+}
+
+.delete-modal-actions button:last-child {
+  background-color: #ffffff;
+  color: #4b5563;
+  border: 1px solid #e5e7eb;
+}
+
+.delete-modal-actions button:last-child:hover {
+  background-color: #f9fafb;
+  border-color: #d1d5db;
+}
+
+/* Search Bar */
+.search-bar {
+  position: fixed; /* Fixes the search bar to the right side of the page */
+  top: 30px; /* Adjust the top distance from the top of the page */
+  right: 20px; /* Positions it on the right side */
+  z-index: 1000; /* Ensures it's above other elements */
+}
+
+.search-bar input {
+  padding: 5px 8px; /* Slightly smaller padding */
+  width: 240px; /* Reduced width */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 11px; /* Smaller font size */
+  background-color: #fff;
+  color: #333;
+}
+
+.search-bar input::placeholder {
+  color: #aaa;
+}
+
+.manage-tenants .admin-no-tenants {
+  text-align: center;
+  color: #777;
+  font-size: 12px; /* Smaller font size */
+}
+
+/* Move-Out Modal */
+.move-out-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.move-out-modal-content {
+  background-color: #ffffff;
+  width: 480px;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.move-out-form {
+  margin: 24px 0;
+}
+
+.move-out-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 14px;
+}
+
+.move-out-form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.move-out-form input:focus {
+  border-color: #4f46e5;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.move-out-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.move-out-modal-actions button {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.move-out-modal-actions button:first-child {
+  background-color: #4f46e5;
+  color: #ffffff;
+  border: none;
+}
+
+.move-out-modal-actions button:first-child:hover {
+  background-color: #4338ca;
+}
+
+.move-out-modal-actions button:last-child {
+  background-color: #ffffff;
+  color: #4b5563;
+  border: 1px solid #e5e7eb;
+}
+
+.move-out-modal-actions button:last-child:hover {
+  background-color: #f9fafb;
+  border-color: #d1d5db;
+}
+
+/* Move-Out Button */
+.tenant-actions .move-out-btn {
+  background-color: #4f46e5;
+  color: #ffffff;
+  padding: 8px 16px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.tenant-actions .move-out-btn:hover {
+  background-color: #4338ca;
+}
+
+/* Moved Out Table Row */
+.tenants-list tr.moved-out {
+  background-color: #f8fafc;
+}
+
+.tenants-list tr.moved-out td {
+  color: #64748b;
+  font-style: italic;
+}
+
+.message-banner {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px 25px;
+  border-radius: 5px;
+  z-index: 2001; /* Higher than modal z-index */
+  animation: slideIn 0.3s ease-out;
+}
+
+.success {
+  background-color: #28a745;
+  color: white;
+  border: 1px solid #1e7e34;
+}
+
+.error {
+  background-color: #dc3545;
+  color: white;
+  border: 1px solid #bd2130;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

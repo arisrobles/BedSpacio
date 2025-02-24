@@ -1,0 +1,119 @@
+/* ManageBookings.css */
+
+.manage-bookings {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 16px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-left: 120px;
+}
+
+.manage-bookings h1 {
+  font-size: 18px; /* Reduced font size for a more formal look */
+  font-weight: 600; /* Slightly lighter weight for a professional appearance */
+  color: #333;
+  margin-bottom: 10px; /* Reduced margin */
+  text-align: left;
+}
+
+.manage-bookings .buttons-wrapper {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px; /* Reduced margin */
+  justify-content: flex-end;
+}
+
+.manage-bookings .search-input {
+  padding: 5px 8px; /* Slightly smaller padding */
+  width: 240px; /* Reduced width */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 11px; /* Smaller font size */
+  background-color: #fff;
+  color: #333;
+}
+
+.manage-bookings .search-input::placeholder {
+  color: #aaa;
+}
+
+.manage-bookings .bookings-list {
+  margin-top: 18px; /* Reduced top margin */
+}
+
+.manage-bookings .bookings-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.manage-bookings .bookings-list th,
+.manage-bookings .bookings-list td {
+  padding: 10px 12px; /* Reduced padding */
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.manage-bookings .bookings-list th {
+  background-color: #f4f4f4;
+  font-weight: 600; /* Slightly lighter weight */
+  color: #333;
+  font-size: 12px; /* Smaller font size for headings */
+}
+
+.manage-bookings .bookings-list td {
+  color: #666;
+  font-size: 11px; /* Smaller font size for table data */
+}
+
+.manage-bookings .bookings-list tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Action Buttons Styles */
+.manage-bookings .action-buttons {
+  display: flex;
+  gap: 6px; /* Reduced gap */
+}
+
+.manage-bookings .action-buttons button {
+  padding: 5px 10px; /* Smaller padding */
+  font-size: 11px; /* Smaller font size */
+  font-weight: 500; /* Slightly lighter weight */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.manage-bookings .action-buttons .approve {
+  background-color: #28a745; /* Green for Approve */
+}
+
+.manage-bookings .action-buttons .approve:hover {
+  background-color: #218838;
+}
+
+.manage-bookings .action-buttons .reject {
+  background-color: #dc3545; /* Red for Reject */
+}
+
+.manage-bookings .action-buttons .reject:hover {
+  background-color: #c82333;
+}
+
+.manage-bookings .action-buttons .cancel {
+  background-color: #ffc107; /* Yellow for Cancel */
+}
+
+.manage-bookings .action-buttons .cancel:hover {
+  background-color: #e0a800;
+}
+
+.manage-bookings .admin-no-bookings {
+  text-align: center;
+  color: #777;
+  font-size: 12px; /* Smaller font size */
+}

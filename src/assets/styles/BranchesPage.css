@@ -1,0 +1,540 @@
+.branches-section {
+  padding: 30px 15px; /* Reduced padding */
+  background-color: #f9f9f9;
+  font-family: 'Arial', sans-serif;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 20px; /* Reduced margin */
+}
+
+.section-header h2 {
+  font-size: 1.8rem; /* Smaller font size */
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.section-header p {
+  font-size: 0.9rem; /* Smaller font size */
+  color: #7f8c8d;
+}
+
+/* Flexbox container for content */
+.branches-content {
+  display: flex;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.branches-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  flex: 2;
+  max-width: 800px; /* Control the width of the branches list */
+}
+
+.branch-item {
+  padding: 15px 0; /* Reduced padding */
+  border-bottom: 1px solid #ddd; /* Thinner border */
+}
+
+.branch-item:last-child {
+  border-bottom: none;
+}
+
+.branch-item h3 {
+  font-size: 1.4rem; /* Smaller heading size */
+  color: #3498db;
+  margin-bottom: 8px;
+}
+
+.branch-item p {
+  font-size: 0.9rem; /* Smaller font size */
+  color: #34495e;
+  line-height: 1.5;
+}
+
+.branch-item p strong {
+  color: #2c3e50;
+}
+
+/* Image styling for responsiveness */
+.branch-image {
+  width: 200px; /* Smaller image size */
+  height: 150px; /* Adjust height */
+  object-fit: cover;
+  margin-right: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Smaller shadow */
+}
+
+.branch-details {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Reduced gap */
+}
+
+.branch-info {
+  flex: 1;
+}
+
+/* Why Choose Us section */
+.why-choose-us {
+  flex: 1;
+  position: sticky; /* Make it stick while scrolling */
+  top: 20px; /* Distance from top while sticky */
+  height: fit-content;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-left: 20px; /* Space between branches list and Why Choose Us */
+  max-width: 350px; /* Maximum width for the Why Choose Us section */
+}
+
+.why-choose-us h3 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.why-choose-us ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 15px 0;
+}
+
+.why-choose-us ul li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #34495e;
+}
+
+.additional-image {
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* See Property button */
+.see-property-text-btn {
+  color: #3498db;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.9rem; /* Smaller font size */
+}
+
+.see-property-text-btn:hover {
+  color: #2980b9;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 1024px) {
+  .branches-content {
+    gap: 20px;
+  }
+
+  .branch-image {
+    width: 200px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .branches-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .why-choose-us {
+    margin-top: 20px;
+  }
+
+  .branch-image {
+    width: 100%;
+    height: auto; /* Allows flexible resizing */
+    margin: 0 auto 15px;
+  }
+
+  .branch-details {
+    flex-direction: column; /* Stacks content for smaller screens */
+    text-align: left; /* Centers text for better readability */
+  }
+
+  .branch-info {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .section-header p {
+    font-size: 0.9rem;
+  }
+
+  .why-choose-us h3 {
+    font-size: 1.5rem;
+  }
+
+  .why-choose-us ul li {
+    font-size: 0.9rem;
+  }
+
+  .see-property-text-btn {
+    font-size: 0.9rem;
+  }
+}
+
+/* Advertisement Styles */
+.ad-label {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+
+/* Top and Bottom Banner Ads */
+.ad-banner-top,
+.ad-banner-bottom {
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ad-banner-top {
+  margin-bottom: 20px;
+}
+
+.ad-banner-bottom {
+  margin-top: 20px;
+}
+
+.ad-container {
+  max-width: 728px; /* Standard banner ad size */
+  width: 100%;
+  margin: 0 auto;
+}
+
+.ad-placeholder {
+  background-color: #e0e0e0;
+  height: 90px; /* Standard banner height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  border: 1px dashed #999;
+}
+
+/* Sidebar Ads */
+.ad-sidebar-left,
+.ad-sidebar-right {
+  width: 160px; /* Standard skyscraper ad width */
+  min-width: 160px;
+  margin: 0 15px;
+}
+
+.ad-placeholder-vertical {
+  background-color: #e0e0e0;
+  height: 600px; /* Standard skyscraper height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  border: 1px dashed #999;
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+}
+
+/* Main content wrapper adjustments */
+.main-content {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .why-choose-us {
+    position: static;
+    max-width: none;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .branches-content {
+    flex-direction: column;
+  }
+
+  .branches-list {
+    max-width: none;
+  }
+
+  .why-choose-us {
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .ad-container {
+    max-width: 468px; /* Smaller banner size for mobile */
+  }
+
+  .ad-placeholder {
+    height: 60px; /* Smaller height for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .ad-container {
+    max-width: 320px; /* Even smaller for very small screens */
+  }
+
+  .ad-banner-top,
+  .ad-banner-bottom {
+    padding: 10px 0;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .branches-content {
+    padding: 0 20px;
+  }
+
+  .why-choose-us {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .branches-list {
+    max-width: 100%;
+  }
+
+  .why-choose-us {
+    position: static;
+    max-width: none;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .branch-details {
+    flex-direction: row;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .branches-content {
+    flex-direction: column;
+    padding: 0 15px;
+  }
+
+  .ad-sidebar-left,
+  .ad-sidebar-right {
+    display: none; /* Hide sidebar ads */
+  }
+
+  .branch-image {
+    width: 180px;
+    height: 135px;
+  }
+
+  .why-choose-us {
+    margin: 20px 0;
+  }
+
+  .ad-container {
+    max-width: 468px;
+  }
+}
+
+@media (max-width: 768px) {
+  .branches-section {
+    padding: 20px 10px;
+  }
+
+  .section-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .branch-details {
+    flex-direction: column;
+  }
+
+  .branch-image {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+  .branch-info {
+    width: 100%;
+  }
+
+  .branch-info h3 {
+    font-size: 1.3rem;
+    margin-top: 10px;
+  }
+
+  .why-choose-us {
+    padding: 15px;
+  }
+
+  .why-choose-us h3 {
+    font-size: 1.3rem;
+  }
+
+  .ad-container {
+    max-width: 320px;
+  }
+
+  .ad-placeholder {
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .branches-section {
+    padding: 15px 8px;
+  }
+
+  .section-header {
+    margin-bottom: 15px;
+  }
+
+  .section-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .section-header p {
+    font-size: 0.9rem;
+  }
+
+  .branch-item {
+    padding: 12px 0;
+  }
+
+  .branch-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .branch-info p {
+    font-size: 0.9rem;
+  }
+
+  .why-choose-us {
+    padding: 12px;
+    margin: 15px 0;
+  }
+
+  .why-choose-us h3 {
+    font-size: 1.2rem;
+  }
+
+  .why-choose-us ul li {
+    font-size: 0.9rem;
+  }
+
+  .ad-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .ad-placeholder {
+    height: 50px;
+  }
+}
+
+/* Handle very small screens */
+@media (max-width: 320px) {
+  .section-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .branch-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .branch-info p {
+    font-size: 0.85rem;
+  }
+
+  .why-choose-us h3 {
+    font-size: 1.1rem;
+  }
+
+  .why-choose-us ul li {
+    font-size: 0.85rem;
+  }
+}
+
+/* Print Media Query */
+@media print {
+  .ad-banner-top,
+  .ad-banner-bottom,
+  .ad-sidebar-left,
+  .ad-sidebar-right {
+    display: none;
+  }
+
+  .branches-section {
+    padding: 0;
+  }
+
+  .branch-image {
+    max-width: 200px;
+  }
+}
+
+/* Ad Header and Close Button */
+.ad-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+  margin-bottom: 5px;
+}
+
+.ad-close-btn {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0 5px;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.ad-close-btn:hover {
+  color: #333;
+}
+
+.ad-close-btn:focus {
+  outline: none;
+  color: #333;
+}

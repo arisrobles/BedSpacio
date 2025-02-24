@@ -1,0 +1,234 @@
+/* Scope all styles to .rent-room-page */
+.rent-room-page .rent-room-container {
+    padding: 50px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+}
+
+.rent-room-page .rent-room-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.rent-room-page .room-image-container {
+    flex: 1;
+    max-width: 400px; /* Reduced max width */
+    margin: 10px;
+}
+
+.rent-room-page .room-image {
+    width: 100%;
+    height: auto;
+}
+
+.rent-room-page .room-details-container {
+    flex: 1;
+    max-width: 350px; /* Reduced size */
+    margin: 10px;
+    padding: 15px;
+    background-color: rgb(234, 234, 234);
+    color: #333;
+    line-height: 24px;
+}
+
+.room-details-container h2 {
+    font-size: 28px;
+}
+
+.room-details-container h1 {
+    font-size: 24px;
+}
+
+.rent-room-page .form-container {
+    width: 100%;
+    max-width: 700px; /* Smaller form width */
+    padding: 20px;
+}
+
+.rent-room-page .form-container h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.rent-room-page form label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+}
+
+.rent-room-page form label.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Adjust spacing between text and checkbox */
+}
+
+.rent-room-page form input[type="checkbox"] {
+    width: auto;
+    margin: 0; /* Remove margin to avoid unnecessary spacing */
+}
+
+.rent-room-page form input,
+.rent-room-page form button {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.rent-room-page form input:focus,
+.rent-room-page form button:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 3px rgba(76, 175, 80, 0.4);
+}
+
+.rent-room-page form button {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.rent-room-page form button:hover {
+    background-color: #45a049;
+}
+
+.rent-room-page .success-message,
+.rent-room-page .error-message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.rent-room-page .success-message {
+    background-color: #e6f7e6;
+    color: #4caf50;
+}
+
+.rent-room-page .error-message {
+    background-color: #f8d7da;
+    color: #d9534f;
+}
+
+/* Style for the gender select field */
+.rent-room-page form select[name="gender"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+/* Focus state for the gender field */
+.rent-room-page form select[name="gender"]:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 3px rgba(76, 175, 80, 0.4);
+}
+
+/* RentRoomPage.css */
+.rent-room-page .intro-section {
+    text-align: center;
+    padding: 15px 10px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.rent-room-page .intro-section h1 {
+    font-size: 1.8rem; /* Smaller headline size */
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.rent-room-page .intro-section p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.rent-room-page .intro-section h1::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #007bff;
+    margin: 8px auto 0 auto;
+}
+
+/* Mobile responsiveness for the gender select field */
+@media (max-width: 480px) {
+    .rent-room-page form select[name="gender"] {
+        font-size: 14px; /* Smaller font size on mobile */
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .rent-room-page .rent-room-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rent-room-page .room-image-container,
+    .rent-room-page .room-details-container {
+        max-width: 100%;
+        margin: 15px 0;
+    }
+
+    .intro-section {
+        padding: 15px 10px; /* Reduce padding for smaller screens */
+    }
+
+    .intro-section h1 {
+        font-size: 1.8rem; /* Slightly smaller headline */
+    }
+
+    .intro-section p {
+        font-size: 0.95rem; /* Adjust body text for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .rent-room-page .form-container {
+        padding: 20px;
+    }
+    .rent-room-page form label {
+        font-size: 14px;
+        width: 100%;
+    }
+    .rent-room-page form input,
+    .rent-room-page form button {
+        font-size: 14px;
+    }
+    .intro-section {
+        padding: 10px 8px; /* Further reduce padding */
+    }
+
+    .intro-section h1 {
+        font-size: 1.5rem; /* Smaller headline for very small screens */
+    }
+
+    .intro-section p {
+        font-size: 0.9rem; /* Smaller body text for narrow screens */
+    }
+}

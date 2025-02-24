@@ -1,0 +1,182 @@
+/* Main container for the page layout */
+.property-container {
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  padding: 140px 10px; /* Reduced padding on the left and right */
+  max-width: 1900px;
+  padding-bottom: 0;  /* Remove any bottom padding */
+}
+
+/* Section containing property details */
+.property-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 40px;
+  justify-content: space-between; /* Ensures even distribution */
+}
+
+/* Title styling for the property */
+.property-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  width: 100%;
+  font-family: 'Georgia', serif; /* Elegant font for headings */
+}
+
+/* Styling for the property information section */
+.property-info {
+  flex: 1;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.property-info p {
+  margin-bottom: 15px;
+}
+
+.property-info strong {
+  color: #333;
+}
+
+/* Image container for the property */
+.property-image-container {
+  flex: 0 0 40%; /* Occupies 40% of the container width */
+}
+
+.property-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Styling for the location section */
+.property-location {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.property-location-title {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.property-location iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+  margin-bottom: 70px;  /* Remove any bottom margin */
+}
+
+/* Section for Apartment Features */
+.property-features-container {
+  flex: 0 0 30%; /* Occupies 30% of the container width */
+}
+
+.property-features {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+
+/* Specific style for the property price */
+.property-price {
+  font-size: 2em;  /* Increases the font size */
+  font-weight: bold;  /* Makes the text bold */
+  color: #FF5733;  /* Highlights the price with a distinct color */
+  margin-top: 10px;  /* Adds spacing above the price */
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center; /* Centers the items vertically */
+}
+
+.price-month {
+  color: black; /* Makes the /month text black */
+  font-size: 0.6em;  /* Makes the /month text a bit smaller */
+  margin-left: 5px;  /* Adds a small space between the price and /month */
+}
+
+.availability-btn {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.availability-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1024px) {
+  /* On tablets and medium-sized screens, stack the layout */
+  .property-details {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .property-image-container {
+    flex: 0 0 100%; /* Full width for image */
+  }
+
+  .property-features-container {
+    flex: 0 0 100%; /* Full width for features */
+  }
+}
+
+@media (max-width: 768px) {
+  /* For mobile screens */
+  .property-container {
+    padding: 80px 10px; /* Reduce top padding for mobile */
+  }
+
+  .property-title {
+    font-size: 2rem; /* Slightly smaller title */
+  }
+
+  .property-info {
+    font-size: 1rem; /* Adjust font size for readability */
+  }
+
+  .property-features {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  .property-location-title {
+    font-size: 1.5rem;
+  }
+
+  .property-location iframe {
+    height: 300px; /* Adjust map size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  /* For extra small mobile devices */
+  .property-title {
+    font-size: 1.5rem; /* Make title even smaller for small screens */
+  }
+
+  .property-info {
+    font-size: 0.9rem;
+  }
+
+  .property-features {
+    font-size: 0.9rem;
+    padding: 6px;
+  }
+
+  .property-location iframe {
+    height: 250px; /* Further reduce iframe height */
+  }
+}

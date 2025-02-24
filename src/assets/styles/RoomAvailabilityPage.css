@@ -1,0 +1,152 @@
+/* Room Details Container */
+.room-details-page__container {
+  font-family: 'Roboto', sans-serif;
+  padding: 30px 10px;
+  background: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title for Room Details */
+.room-details-page__title {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 28px;
+  font-family: 'Georgia', serif;
+  margin: 60px 0 25px;
+}
+
+/* Room List Container */
+.room-details-page__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  width: 100%;
+  max-width: 1500px;
+}
+
+/* Individual Room Card */
+.room-details-page__card {
+  background: #fff;
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Room Image */
+.room-details-page__image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* Room Info Section */
+.room-details-page__info {
+  padding: 15px;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Room Number */
+.room-details-page__info-title {
+  font-size: 18px;
+  color: #34495e;
+  font-weight: bold;
+}
+
+/* Room Description */
+.room-details-page__info-description {
+  font-size: 14px;
+  color: #34495e;
+}
+
+/* Room Details */
+.room-details-page__info-details p {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin: 4px 0;
+  line-height: 1.4;
+}
+
+.room-details-page__info-details strong {
+  color: #2c3e50;
+}
+
+/* Rent Room Button */
+.room-details-page__rent-btn {
+  margin-top: -5px;
+  padding: 8px 12px;
+  background-color: transparent;
+  color: #007bff;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-align: left;
+  text-decoration: underline;
+}
+
+.room-details-page__rent-btn:hover {
+  color: #0056b3;
+}
+
+/* Responsive Adjustments */
+
+/* 5 Rooms per row on large screens (Desktop) */
+@media (min-width: 1200px) {
+  .room-details-page__list {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* 4 Rooms per row on medium-large screens */
+@media (max-width: 1199px) {
+  .room-details-page__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* 3 Rooms per row on tablets */
+@media (max-width: 992px) {
+  .room-details-page__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 2 Rooms per row on smaller tablets */
+@media (max-width: 768px) {
+  .room-details-page__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 1 Room per row on mobile */
+@media (max-width: 480px) {
+  .room-details-page__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .room-details-page__title {
+    font-size: 20px;
+  }
+
+  .room-details-page__info-title {
+    font-size: 16px;
+  }
+
+  .room-details-page__info-description,
+  .room-details-page__info-details p {
+    font-size: 12px;
+  }
+
+  .room-details-page__rent-btn {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+}

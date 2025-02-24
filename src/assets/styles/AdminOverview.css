@@ -1,0 +1,132 @@
+/* Admin Content */
+.content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: #f8f9fa;
+    margin-left: 120px;
+}
+
+/* Stats Section */
+.stats-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.stat-card-container {
+    text-align: center;
+}
+
+.stat-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    height: 160px;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+}
+
+.stat-card h3 {
+    margin: 0;
+    text-align: right;
+    font-size: 24px;
+    flex: 1;
+}
+
+.stat-card .icon {
+    font-size: 48px;
+    margin-right: 16px;
+    opacity: 0.9;
+}
+
+.stat-card-container a {
+    display: inline-block;
+    margin-top: 12px;
+    text-decoration: none;
+    color: #495057;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.stat-card-container a:hover {
+    color: #2c3e50;
+}
+
+/* Professional color scheme for stat cards */
+.stat-card.blue {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+}
+
+.stat-card.green {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+}
+
+.stat-card.yellow {
+    background: linear-gradient(135deg, #f39c12, #f1c40f);
+}
+
+.stat-card.teal {
+    background: linear-gradient(135deg, #16a085, #1abc9c);
+}
+
+/* Session Expiry Modal */
+.modal-overlay-expire {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content-expire {
+    background: white;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+.modal-content-expire h2 {
+    margin-bottom: 16px;
+    color: #2c3e50;
+    font-size: 24px;
+}
+
+.modal-content-expire p {
+    color: #495057;
+    margin-bottom: 24px;
+}
+
+.modal-content-expire button {
+    padding: 12px 24px;
+    background: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.modal-content-expire button:hover {
+    background: #34495e;
+}
